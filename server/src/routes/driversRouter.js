@@ -9,13 +9,14 @@ const {
 const driversRouter = Router();
 
 const validate = (req, res, next) => {
-  const { name, surname, nationality, birthDate } = req.body;
+  const { name, surname, nationality, birthDate, teams } = req.body;
   if (!name) return res.status(400).json({ error: "Missing name" });
   if (!surname) return res.status(400).json({ error: "Missing surname" });
   if (!nationality)
     return res.status(400).json({ error: "Missing nationality" });
   if (!birthDate) return res.status(400).json({ error: "Missing birthDate" });
   next();
+  if (!teams) return res.status(400).json({ error: "Missing teams" });
 };
 
 // Get all drivers

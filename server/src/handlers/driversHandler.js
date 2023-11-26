@@ -31,7 +31,7 @@ const getDriverByIdHandler = async (req, res) => {
 
 //This handler create a new driver
 const createDriverHandler = async (req, res) => {
-  const { name, surname, description, image, nationality, birthDate } =
+  const { name, surname, description, image, nationality, birthDate, teams } =
     req.body;
   try {
     const newDriver = await createDriver(
@@ -40,7 +40,8 @@ const createDriverHandler = async (req, res) => {
       description,
       image,
       nationality,
-      birthDate
+      birthDate,
+      teams
     );
     res
       .status(201)

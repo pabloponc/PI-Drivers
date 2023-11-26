@@ -49,6 +49,7 @@ const getDriverById = async (id, source) => {
     image: driver.image.url,
     nationality: driver.nationality,
     birthDate: driver.dob,
+    teams: driver.teams,
   };
   const finalDriver = source === "api" ? cutDriver : driver;
 
@@ -62,7 +63,8 @@ const createDriver = async (
   description,
   image,
   nationality,
-  birthDate
+  birthDate,
+  teams
 ) => {
   if (!image) image = defaultImage;
   await Driver.create({
@@ -72,6 +74,7 @@ const createDriver = async (
     image,
     nationality,
     birthDate,
+    teams,
   });
 };
 

@@ -31,6 +31,10 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      teams: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
       birthDate: {
         type: DataTypes.DATEONLY, // Almacenar solo la fecha de nacimiento sin la hora
         allowNull: false,
