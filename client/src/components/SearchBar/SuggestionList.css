@@ -1,0 +1,35 @@
+.suggestion-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    margin-left: 15px;
+    width: 450px;
+    max-height: 600px;
+    overflow-y: auto;
+    border-radius: 8px;
+    display: none;
+    background-color: rgb(36, 36, 46);
+    color: hsl(220, 7%, 91%);
+    box-shadow: 0px 11px 41px 4px rgba(0,0,0,0.57);
+    opacity: 0;
+}
+  
+/* Mostrar la lista de sugerencias cuando hay sugerencias */
+.suggestion-list.showSuggestions {
+    display: block;
+    opacity:1;
+}
+  
+/* Estilos para los elementos de la lista de sugerencias */
+.suggestionItem {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #444;
+}
+
+.suggestionItem:hover {
+    background-color: hsl(210, 11%, 15%);
+    color: hsl(210, 55%, 70%);
+}

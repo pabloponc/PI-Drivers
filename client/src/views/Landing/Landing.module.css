@@ -1,0 +1,78 @@
+.container {
+    background-image: url('https://www.hdcarwallpapers.com/walls/2018_renault_rs18_f1_formula_1_car_4k-HD.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .landingContent {
+    width: 500px;
+    height: 500px;
+    background-color: rgb(24, 24, 35, 0.7);
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    color: white;
+    border: 5px solid rgb(24, 24, 35); 
+    border-radius: 50%;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s;
+  }
+
+  .landingContent:hover {
+    transform: scale(1.03);
+  }
+  
+  .button {
+    padding: 10px 20px;
+    width: 180px;
+    height: 50px;
+    background-color: rgb(83, 127, 231, 0.9);
+    color: rgb(192, 238, 242);
+    border: 2px solid rgb(62, 111, 225);
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
+  }
+
+.text {
+    margin-top: 150px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 50px;
+}
+  
+
+.title{
+    color: rgb(192, 238, 242);
+}
+
+.subtitle {
+    color: rgb(192, 238, 242);
+    
+}
+
+.button:hover{
+  color: rgb(24, 24, 35);
+}
+
+.button:active{
+  transform: scale(0.95);
+}
+
+button {
+  transition: all 0.3s;
+}
+button:hover{
+  transform: scale(1.05);
+}

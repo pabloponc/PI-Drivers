@@ -1,0 +1,56 @@
+.Cards {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.cards-organization {
+    
+    /* display: flex; */
+
+    margin-left: 13.5%;
+
+}
+
+select {
+    align-self: center;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 6px;
+    height: 33px;
+    border: 0;
+    /* border: transparent; */
+    background-color: rgb(50, 78, 143);
+    opacity: 100%;
+    color: hsl(220, 7%, 91%);
+    transition: all 0.2s ease;
+}
+
+select:hover {
+    background-color: rgb(61, 85, 142);
+    transform: scale(1.01);
+    color: rgb(192, 238, 242);
+}
+
+button {
+    align-self: center;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 6px;
+    border: 0;
+    height: 33px;
+    /* border: transparent; */
+    background-color: rgb(50, 78, 143);
+    opacity: 100%;
+    color: hsl(220, 7%, 91%);
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(61, 85, 141);
+    transform: scale(1.01);
+    color: rgb(192, 238, 242);
+}

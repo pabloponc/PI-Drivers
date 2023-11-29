@@ -1,0 +1,6 @@
+export const SET_ALL_DRIVERS = "SET_ALL_DRIVERS";
+export const GET_DRIVER = "GET_DRIVER";
+export const SET_ALL_TEAMS = "SET_ALL_TEAMS";
+export const SET_FILTER_BY_TEAM = "SET_FILTER_BY_TEAM";
+export const SET_FILTER_BY_ORIGIN = "SET_FILTER_BY_ORIGIN";
+export const RESET_FILTERS = "RESET_FILTERS";

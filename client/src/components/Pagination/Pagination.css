@@ -1,0 +1,51 @@
+.pagination {
+    
+    display: flex;
+
+    flex-wrap: wrap;
+
+    /* justify-content: center; */
+
+    margin-left: 31%;
+    
+    margin-right: auto;
+
+}
+
+/* .items-container {
+    
+} */
+
+.button-pagination {
+    color: hsl(220, 7%, 91%);
+    background-color: hsl(218, 11%, 14%);
+    font-weight: 900;
+    font-size: 20px;
+    border: 0;
+    width: 30px;
+    margin: 3px;
+    border-radius: 3px;
+}
+
+.puntitos {
+    color: hsl(220, 7%, 91%);
+    margin: 4px;
+    letter-spacing: 1.5px;
+}
+
+.numeracion {
+    color: hsl(220, 7%, 91%);
+    background-color: hsl(218, 11%, 14%);
+    font-weight: 600;
+    font-size: 15px;
+    margin: 2px;
+    border: 0;
+    border-radius: 3px;
+    width: 30px;
+}
+
+.numeracion.active {
+    background-color: rgb(61, 85, 141);
+    color:#030701;
+    font-weight: 700;
+}

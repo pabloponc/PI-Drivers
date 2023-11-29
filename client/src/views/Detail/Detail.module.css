@@ -1,0 +1,147 @@
+.details {
+    text-align: center;
+    margin-top:4%;
+    padding-bottom:4%;
+    font-family: 'Poppins' sans-serif;
+    width: 70%;
+    min-height: 150px;
+    margin-left: 15%;
+    background: rgba( 255, 255, 255, 0.12 );
+    box-shadow: 0 5px 15px 0 rgba(112, 112, 112, 0.37);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: hsl(220, 0%, 70%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.details h1 {
+    margin-bottom: 35px;
+    color: hsl(220, 7%, 95%);
+    transition: all 0.5s;
+}
+
+.details h1:hover {
+    transform: scale(1.06);
+    color: hsl(210, 68%, 58%);
+}
+
+.imageContainer{
+    align-self: center;
+}
+
+.details article {
+    padding: 15px;
+    transition: all 0.2s;
+    border-radius: 30px;
+}
+
+.details article:hover {
+    background-color: hsl(252, 5%, 19%);
+    border-radius: 30px;
+    color: hsl(220, 7%, 95%);
+    transform: scale(1.01);
+}
+
+.birthDate:hover {
+    background-color: hsl(252, 5%, 19%);
+    border-radius: 30px;
+    color: hsl(220, 7%, 95%);
+    transform: scale(1.01);
+}
+
+.details img {
+    width: 400px;
+    scale: 0.9;
+    margin-left: 17px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 1.5s ease;
+    transition: transform 1.5s ease;
+}
+
+.imageContainer{
+    transform: translateY(-15px);
+}
+
+.infoContainer{
+    padding-top: 30px;
+}
+
+.details img:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+}
+
+.propiedad {
+    text-align: center;
+    color: #576fd9;
+
+    
+}
+.propiedad2 {
+    text-align: center;
+    margin: 10px;
+   
+}
+
+
+.desc {
+    justify-content: center;
+    
+}
+
+.stepContainer {
+
+    display:flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    justify-content: center;
+
+    
+
+}
+
+.stepContainer h3 {
+    width: 250px;
+    margin: 15px;
+}
+
+.birthDate {
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: flex-start;
+
+    justify-content: center;
+    
+    padding: 15px;
+    
+    transition: all 0.2s;
+
+    border-radius: 30px;
+
+}
+
+.number {
+    margin-left: auto;
+    margin-right: 100px;
+    padding-right: 20%;
+    color: hsl(220, 7%, 95%);
+}
+
+#dob {
+    padding-left: 20%;
+}

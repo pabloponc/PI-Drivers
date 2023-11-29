@@ -1,12 +1,19 @@
 const axios = require("axios");
 const { Driver } = require("../db");
-const { cleanArray, capitalizeFirstLetter, imageSetter } = require("./helpers");
+const {
+  cleanArray,
+  cleanDbArray,
+  capitalizeFirstLetter,
+  imageSetter,
+} = require("./helpers");
 const defaultImage =
   "https://th.bing.com/th/id/OIP.Z8H1PuHgc9kOhorZshNCwAHaE8?rs=1&pid=ImgDetMain";
 
 // This controler gets all drivers
 const getAllDrivers = async () => {
-  const dbDrivers = await Driver.findAll();
+  const dbDriversRaw = await Driver.findAll();
+
+  const dbDrivers = cleanDbArray(dbDriversRaw);
 
   const apiDriversRaw = (await axios.get(`http://localhost:5000/drivers`)).data;
 
@@ -35,25 +42,32 @@ const searchByName = async (name) => {
 const getDriverById = async (id, source) => {
   const driver =
     source === "api"
-      ? (await axios.get(`http://localhost:5000/drivers`)).data.find(
+      ? (await axios.get(`http://localhost:3001/drivers`)).data.find(
           (driver) => driver.id.toString() === id.toString()
         )
       : await Driver.findByPk(id);
 
   imageSetter(driver);
+  let teams = driver.teams;
+  if (Array.isArray(teams)) {
+    teams = teams.join(", ");
+  }
   const cutDriver = {
     id: driver.id,
-    name: driver.name.forname,
-    surname: driver.name.surname,
+    name: driver.name,
+    surname: driver.surname,
     description: driver.description,
-    image: driver.image.url,
+    image: driver.image,
     nationality: driver.nationality,
-    birthDate: driver.dob,
-    teams: driver.teams,
+    birthDate: driver.birthDate,
+    teams: teams,
   };
-  const finalDriver = source === "api" ? cutDriver : driver;
+  console.log(cutDriver);
 
-  return finalDriver;
+  // const finalDriver = source === "api" ? cutDriver : driver;
+
+  // return finalDriver;
+  return cutDriver;
 };
 
 //This controller create a new driver
@@ -67,6 +81,7 @@ const createDriver = async (
   teams
 ) => {
   if (!image) image = defaultImage;
+
   await Driver.create({
     name,
     surname,

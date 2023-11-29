@@ -1,0 +1,165 @@
+.card {
+    background-color: #181823;
+    display: inline-block;
+    width: 450px;
+    height: 400px;
+    margin: 1.5rem;
+    overflow: hidden;
+    background: rgba( 255, 255, 255, 0 );
+    box-shadow: 0 0px 10px 0 rgba(112, 112, 112, 0.37);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius:100px;
+    z-index: 10;
+    /* color: whitesmoke; */
+    transition: background 0.2s, box-shadow 0.5s;
+    
+}
+
+.card:hover{
+    background: rgb(83, 127, 231);
+}
+
+.cardImg {
+    background-color:rgb(50, 78, 143) ;
+    
+    width: 450px;
+
+    height: 400px;
+    
+    position:absolute;
+
+    transform: translateY(0px);
+    transform: translateX(0px);
+    
+    z-index: 1;
+
+    opacity: 1;
+
+    box-shadow: 20px 20px 20px -19px black;
+
+    object-fit:cover;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.nombre{
+    
+    background-color: rgb(50, 78, 143);
+
+    color: hsl(220, 7%, 91%);
+
+
+    position:absolute;
+
+    z-index: 1;
+
+    opacity: 90%;
+
+    line-height: 1.6;
+
+    font-size:large;
+
+    font-weight: 700;
+
+    padding: 8px;
+
+    border-radius: 20px;
+
+    transform: translate(15%, 15px);
+
+    width: 75%;
+
+    text-align: center;
+
+    transition: all 0.5s ease;
+
+}
+
+Link {
+  
+    text-decoration: none;
+    
+    color: inherit; 
+    
+    cursor: inherit; 
+
+}
+
+.infoContainer{
+    
+    display: flex;
+    
+    flex-direction: column;
+    
+    position:relative;
+
+    transform: translateY(90px);
+
+    transition: all 0.5s ease;
+
+}
+
+.card:hover > .cardImg {
+    transform: translateY(-450px);
+}
+
+.card:hover > .nombre {
+    /* transform: translateY(-305px); */
+    background-color: hsl(210, 11%, 15%);
+    opacity: 1;
+}
+
+.infoContainer {
+
+    font-family: 'Poppins' sans-serif;
+    
+    text-align: center;
+
+    color: hsl(220, 7%, 91%);
+
+    justify-content: center;
+
+}
+
+.infoContainer h2 { 
+    color: hsl(216, 9%, 10%);
+}
+
+
+.teamTitle {
+    
+    position: relative;
+    z-index: 2;
+    font-weight: 700;
+    font-size: 23px;
+    text-align: center;
+
+}
+
+.infoContainer button {
+    height: 40px;
+    width: 150px;
+    border: 0px;
+    margin-left: 15px;
+    border-radius: 8px;
+    background-color: hsl(218, 11%, 14%);
+    color: hsl(220, 7%, 91%);
+    margin-top: 15px;
+}
+
+.infoContainer button:hover{
+    color:hsl(210, 55%, 70%);
+}
+
+.teamNames {
+    text-align: center;
+    font-weight: 300;
+    font-size: 16px;
+    /* color: #7ED957; */
+    /* transform: translateY(-30px); */
+
+}

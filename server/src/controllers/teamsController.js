@@ -9,13 +9,15 @@ const getAllTeams = async () => {
   const uniqueTeams = new Set();
 
   if (teamsInDatabase.length === 0) {
-    response = (await axios.get(`http://localhost:5000/drivers`)).data;
-    console.log(response);
+    response = (await axios.get(`http://localhost:3001/drivers`)).data;
     response.forEach((driver) => {
       if (driver.teams) {
-        const driverTeams = driver.teams.split(",").map((team) => team.trim());
-        driverTeams.forEach((team) => {
-          uniqueTeams.add(team);
+        // const driverTeams = driver.teams
+        //   .split(",")
+        //   .map((team) => team.trim().toUpperCase());
+        driver.teams.forEach((team) => {
+          const formattedTeam = team.trim().toUpperCase();
+          uniqueTeams.add(formattedTeam);
         });
       }
     });
@@ -25,7 +27,7 @@ const getAllTeams = async () => {
 
     return Array.from(uniqueTeams);
   }
-  return teamsInDatabase;
+  return teamsInDatabase.sort();
 };
 
 module.exports = { getAllTeams };
