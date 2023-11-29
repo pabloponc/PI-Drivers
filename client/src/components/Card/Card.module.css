@@ -104,7 +104,7 @@ Link {
 }
 
 .card:hover > .cardImg {
-    transform: translateY(-450px);
+    transform: translateY(+450px);
 }
 
 .card:hover > .nombre {
