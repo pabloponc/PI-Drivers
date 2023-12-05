@@ -8,7 +8,7 @@ module.exports = (sequelize) => {
     {
       id: {
         type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4, // Generar un UUID único para cada entrada
+        defaultValue: DataTypes.UUIDV4,
         primaryKey: true,
       },
       name: {
@@ -24,7 +24,7 @@ module.exports = (sequelize) => {
         allowNull: true,
       },
       image: {
-        type: DataTypes.STRING, // Puedes usar STRING para almacenar la ruta de la imagen
+        type: DataTypes.STRING,
         allowNull: true,
       },
       nationality: {
@@ -36,7 +36,7 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       birthDate: {
-        type: DataTypes.DATEONLY, // Almacenar solo la fecha de nacimiento sin la hora
+        type: DataTypes.DATEONLY,
         allowNull: false,
       },
       created: {

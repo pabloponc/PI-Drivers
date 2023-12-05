@@ -6,7 +6,7 @@ const cleanArray = (arr) =>
     imageSetter(elem);
     const fullName = `${elem.name.forename} ${elem.name.surname}`;
     const teamsArray = elem.teams
-      ? elem.teams.split(", ").map((team) => team.trim())
+      ? elem.teams.split(",").map((team) => team.trim())
       : [];
     return {
       id: elem.id,
@@ -53,9 +53,17 @@ const imageSetter = (driver) => {
   }
 };
 
+const teamsToString = (teams) => {
+  if (Array.isArray(teams)) {
+    teams = teams.join(", ");
+  }
+  return teams;
+};
+
 module.exports = {
   cleanArray,
   cleanDbArray,
   capitalizeFirstLetter,
   imageSetter,
+  teamsToString,
 };

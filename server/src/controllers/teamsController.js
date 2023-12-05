@@ -21,13 +21,16 @@ const getAllTeams = async () => {
         });
       }
     });
-    for (let teamName of uniqueTeams) {
+
+    const sortedTeams = Array.from(uniqueTeams).sort();
+
+    for (let teamName of sortedTeams) {
       await createTeam(teamName);
     }
 
-    return Array.from(uniqueTeams);
+    return Array.from(sortedTeams);
   }
-  return teamsInDatabase.sort();
+  return teamsInDatabase;
 };
 
 module.exports = { getAllTeams };

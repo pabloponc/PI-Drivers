@@ -5,6 +5,7 @@ const {
   cleanDbArray,
   capitalizeFirstLetter,
   imageSetter,
+  teamsToString,
 } = require("./helpers");
 const defaultImage =
   "https://th.bing.com/th/id/OIP.Z8H1PuHgc9kOhorZshNCwAHaE8?rs=1&pid=ImgDetMain";
@@ -62,11 +63,7 @@ const getDriverById = async (id, source) => {
     birthDate: driver.birthDate,
     teams: teams,
   };
-  console.log(cutDriver);
 
-  // const finalDriver = source === "api" ? cutDriver : driver;
-
-  // return finalDriver;
   return cutDriver;
 };
 
@@ -81,6 +78,7 @@ const createDriver = async (
   teams
 ) => {
   if (!image) image = defaultImage;
+  teams = teamsToString(teams);
 
   await Driver.create({
     name,
