@@ -1,0 +1,182 @@
+.createContainer {
+    /* background-color: yellowgreen; */
+    min-height: 84vh;
+    width: 100%;
+    
+}
+
+.createForm {
+    text-align: flex;
+    margin-top:4%;
+    padding-bottom:4%;
+    font-family: 'Poppins' sans-serif;
+    width: 50%;
+    min-height: 150px;
+    margin-left: 25%;
+    background: rgb(154, 59, 59,0.5);
+    box-shadow: 0 5px 15px 0 rgba(112, 112, 112, 0.37);
+    backdrop-filter: blur( 18px );
+    -webkit-backdrop-filter: blur( 18px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border-radius: 1rem;
+    padding: 1.5rem;
+    color: hsl(220, 0%, 70%);
+    display: block;
+}
+
+textarea {
+    /* width: 200px; */
+
+    color: rgb(217, 217, 217);
+
+    /* height: 25px; */
+
+    /* background-color: rgb(28, 80, 47);  */
+    background-color: hsl(218, 11%, 16%);
+
+    border: 0px;
+
+    border-radius: 5px;
+
+    text-indent: 10px;
+
+    transition: border 5s ease;
+
+}
+
+.createForm div {
+    
+    display: flex;
+
+    flex-direction: column;
+    
+    margin: 10px;
+
+    margin-bottom: 5px;
+
+}
+
+.createForm form button {
+
+    font-family: 'Poppins' sans-serif;
+
+    font-weight: 600;
+    
+}
+
+.createForm label {
+
+    display: flex;
+    font-weight: bolder;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    /* align-self: center; */
+   
+}
+
+.createForm form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.createForm input {
+    
+    
+
+    color: rgb(217, 217, 217);
+
+    height: 25px;
+
+    
+    background-color: rgb(50, 78, 143);
+
+    border: 0px;
+
+    border-radius: 5px;
+
+    text-indent: 10px;
+
+    transition: border 5s ease;
+
+}
+
+.createForm input:focus{
+    outline: none;
+    background-color: rgb(59, 92, 170);
+    border: 1px solid rgb(63, 63, 63)
+}
+
+.createForm input:hover{
+    outline: none;
+    border: 1px solid rgb(63, 63, 63);
+}
+
+.createForm input::placeholder{
+    
+    color: rgb(217, 217, 217);
+
+    opacity: 25%;
+    
+    text-align: flex;
+
+    text-indent:10px
+
+}
+
+.createForm button {
+
+    align-self: center;
+
+    /* background-color: rgb(28, 80, 47); */
+    background-color: hsl(218, 11%, 14%);
+
+
+    color: rgb(217, 217, 217);
+
+    border-radius: 2px;
+
+    height: 30px;
+
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: 500;
+
+    font-size: 14.5px;
+
+    box-shadow: 0px 0px 0px 0px black;
+
+    letter-spacing: 0.5px;
+
+    border: 0px;
+
+    padding: 2px 10px;
+
+    transition: box-shadow 0.1s ease;
+    transition: transform 0.1s ease;
+
+}
+
+.selectContainer{
+    align-self: center;
+}
+
+.teams {
+    align-self: center;
+}
+.teamsContainer {
+    
+    width: 300px; /* Ancho del contenedor */
+    height: 300px; /* Altura máxima del contenedor */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical */
+    border: 1px solid #ccc; /* Borde para el contenedor */
+  }
+  
+  .teams-list {
+    padding: 10px; /* Espaciado interno para los equipos */
+  }
+
+  .teams-list label {
+    display: block; /* Cada equipo en una nueva línea */
+    margin-bottom: 5px; /* Espaciado entre equipos */
+  }

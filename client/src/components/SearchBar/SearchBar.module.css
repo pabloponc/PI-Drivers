@@ -66,11 +66,12 @@
 .searchButton:hover {
     background-color: rgb(83, 127, 231);
     color: hsl(210, 55%, 70%);
+    border-radius: 14px;
 }
 
 .createButton {
     height: 40px;
-    width: 200px;
+    width: 150px;
     border: 0px;
     margin-left: 15px;
     border-radius: 8px;
@@ -84,5 +85,6 @@
 .createButton:hover {
     background-color: rgb(83, 127, 231);
     color: hsl(210, 55%, 70%);
+    border-radius: 14px;
     
 }

@@ -8,16 +8,6 @@ import {
   RESET_FILTERS,
 } from "./action-types";
 
-// export const getDrivers = () => {
-//   return async function (dispatch) {
-//     try {
-//       const drivers = (await axios.get("http://localhost:3001/drivers")).data;
-//       dispatch({ type: GET_DRIVERS, payload: drivers });
-//     } catch (error) {
-//       throw new Error("Error al obtener los drivers");
-//     }
-//   };
-// };
 export const getAllDrivers = () => {
   return async (dispatch) => {
     try {
@@ -43,16 +33,6 @@ export const getDriver = (id) => {
   };
 };
 
-// export const getTeams = () => {
-//   return async function (dispatch) {
-//     try {
-//       const teams = (await axios.get("http://localhost:3001/teams")).data;
-//       dispatch({ type: GET_TEAMS, payload: teams });
-//     } catch (error) {
-//       throw new Error("Error al obtener los teams");
-//     }
-//   };
-// };
 export const getAllTeams = () => {
   return async (dispatch) => {
     try {
@@ -66,13 +46,12 @@ export const getAllTeams = () => {
 };
 
 export const postDriver = (driver) => {
-  const endpoint = "/drivers";
+  const endpoint = "http://localhost:3001/drivers";
   return async () => {
     try {
-      console.log(driver);
       const { data } = await axios.post(endpoint, driver);
 
-      if (!data.length) throw Error("No se ha podido crear el driver");
+      // if (!data.length) throw Error("No se ha podido crear el driver");
     } catch (error) {
       console.log(error.message);
     }

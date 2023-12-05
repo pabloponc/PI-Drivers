@@ -19,7 +19,7 @@
 
 .buttonPagination {
     color: hsl(220, 7%, 91%);
-    background-color: hsl(218, 11%, 14%);
+    background-color: rgb(50, 78, 143);
     font-weight: 900;
     font-size: 20px;
     border: 0;
@@ -36,7 +36,7 @@
 
 .numeracion {
     color: hsl(220, 7%, 91%);
-    background-color: hsl(218, 11%, 14%);
+    background-color: rgb(50, 78, 143);
     font-weight: 600;
     font-size: 15px;
     margin: 2px;

@@ -18,7 +18,7 @@
 }
 
 .card:hover{
-    background: rgb(83, 127, 231);
+    background: rgb(83, 127, 231);  
 }
 
 .cardImg {
@@ -26,7 +26,7 @@
     
     width: 450px;
 
-    height: 400px;
+    height: 450px;
     
     position:absolute;
 
@@ -108,7 +108,7 @@ Link {
 }
 
 .card:hover > .nombre {
-    /* transform: translateY(-305px); */
+    transform: translateY(-105px);
     background-color: hsl(210, 11%, 15%);
     opacity: 1;
 }

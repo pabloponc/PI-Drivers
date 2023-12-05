@@ -53,6 +53,11 @@ function SearchBar ({onSearch}) {
 
             <div className={style.containerSB}>
 
+                <div>
+                    <Link to='/'>
+                        <button className={style.searchButton} > LogOut </button>
+                    </Link>
+                </div>
                 <div className={style.inputContainer} >
                     <input className={style.input} type='search' value={searchText} onChange={handleInputChange} onKeyPress={handleEnterPress} placeholder='Find a driver'/>
 
@@ -69,15 +74,10 @@ function SearchBar ({onSearch}) {
 
                 <div>
                     <Link to='/create'>
-                        <button className={style.createButton} > Create your drivers! </button>
+                        <button className={style.createButton} > Create a driver </button>
                     </Link>
                 </div>
 
-                <div>
-                    <Link to='/'>
-                        <button className={style.searchButton} > LogOut </button>
-                    </Link>
-                </div>
 
 
             </div>

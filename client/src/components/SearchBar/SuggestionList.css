@@ -10,7 +10,7 @@
     overflow-y: auto;
     border-radius: 8px;
     display: none;
-    background-color: rgb(36, 36, 46);
+    background-color: rgb(50, 78, 143);
     color: hsl(220, 7%, 91%);
     box-shadow: 0px 11px 41px 4px rgba(0,0,0,0.57);
     opacity: 0;
@@ -26,10 +26,10 @@
 .suggestionItem {
     padding: 12px;
     text-align: center;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid rgb(129, 159, 235);
 }
 
 .suggestionItem:hover {
-    background-color: hsl(210, 11%, 15%);
+    background-color: rgb(83, 127, 231);
     color: hsl(210, 55%, 70%);
 }

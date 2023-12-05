@@ -1,0 +1,277 @@
+// import React, { useState, useEffect } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { getAllTeams, postDriver } from '../../redux/actions';
+// import { Link } from 'react-router-dom';
+
+// import validation from './validations';
+// import Modal from './Modal';
+
+// import './Form.css';
+
+// export default function Form() {
+
+//   const dispatch = useDispatch();
+
+//   const allDrivers = useSelector(state => state.allDrivers);
+//   const allTeams = useSelector(state => state.allTeams);
+
+//   const [driverName, setDriverName] = useState('');
+//   const [driverSurname, setDriverSurname] = useState('');
+//   const [driverDescription, setDriverDescription] = useState(0);
+//   const [driverImage, setDriverImage] = useState('');
+//   const [driverNationality, setDriverNationality] = useState([]);
+//   const [driverBirthDate, setDriverBirthDate] = useState('');
+//   const [driverTeams, setDriverTeams] = useState('');
+//   const [errors, setErrors] = useState({})
+
+//   useEffect(() => {
+    
+//     dispatch(getAllTeams())
+
+//     const validations = validation({
+//       name: driverName,
+//       surname: driverSurname,
+//       description:driverDescription,
+//       image: driverImage,
+//       nationality: driverNationality,
+//       birthDate: driverBirthDate,
+//       teams: driverTeams
+//     }, allDrivers)
+
+    
+
+    
+    
+//     setErrors(validations);
+
+//   }, [dispatch, driverName, driverSurname, driverImage, driverBirthDate, driverNationality, driverTeams,  allDrivers])
+
+
+// //   const handleAddStep = () => {
+// //     setDriverNationality([...driverNationality, driverBirthDate]);
+// //     setDriverBirthDate('');
+// //   }
+
+// //   const isStepButtonDisabled = () => {
+// //     if (driverBirthDate.length < 10) {
+// //       setErrorStep('Minimum characters for the step description: 10 characters');
+// //       setDisabled(true);
+// //     } else if (driverBirthDate.length > 350) {
+// //       setErrorStep('Maximum characters for the step description: 350 characters');
+// //       setDisabled(true);
+// //     } else {
+// //       setErrorStep('');
+// //       setDisabled(false);
+// //     }
+// //   }
+
+// //   const handleEditStep = (index) => {
+// //     const step = driverNationality[index];
+// //     setEditingStep(step);
+// //     setDriverBirthDate(step);
+// //     setEditingStepIndex(index);
+// //   }
+
+// //   const handleSaveStep = () => {
+
+// //     if(editingStep && editingStepIndex !== -1) {
+// //       const updatedSteps = [...driverNationality];
+// //       updatedSteps[editingStepIndex] = driverBirthDate;
+// //       setDriverNationality(updatedSteps);
+// //       setEditingStep(null);
+// //       setEditingStepIndex(-1);
+// //       setDriverBirthDate('');
+// //     }
+
+//   }
+
+// //   const handleDeleteStep = (index) => {
+// //     setDriverNationality((previousSteps) => previousSteps.filter( (_, i) => i !== index) );
+// //   }
+
+//   const handleTeams = (event) => {
+//     if (event.target.checked) {
+//       setDriverTeams([...driverTeams, event.target.value]);
+//     } else {
+//       setDriverTeams(driverTeams.filter(team => team !== event.target.value));
+//     }
+  
+
+
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+
+//     const driverToAdd = {
+//       name: driverName,
+//       summary: driverSurname,
+//       description:driverDescription,
+//       image: driverImage,
+//       nationality: driverNationality,
+//       birthDate: driverBirthDate,
+//       teams: [...driverTeams]
+      
+//     }
+
+//     try {
+      
+//       setShowModal(true);
+
+//       dispatch(postDriver(driverToAdd));
+
+//       setDriverName('');
+
+//       setDriverImage('');
+
+//       setDriverSurname('');
+
+//       setDriverNationality([]);
+
+//       setDriverBirthDate('');
+
+//       setDriverDescription(0);
+
+//       setDriverTeams([]);
+
+//     } catch (error) {
+//       console.error(error.message);
+//     }
+//   }
+
+//   const isSubmitButtonEnabled = driverNationality.length > 0 && Object.keys(errors).length === 0;
+
+//   return (
+//       <div className='container'>
+//       <div className='login'>
+//         <form onSubmit={handleSubmit}>
+          
+//                             <Modal isOpen={showModal} onClose={() => setShowModal(false)}>
+//                                 <div>
+//                                         <span></span>
+//                                         <h1>RECIPE CREATED</h1>
+//                                         <Link to='/home'>Return home</Link>
+//                                 </div>
+//                             </Modal>
+
+//                             <div>
+
+//                                 {/* Input del nombre */}
+//                                     <label>NAME</label>
+//                                     <input 
+//                                     type="text"
+//                                     name="name"
+//                                     placeholder="Enter the name of the recipe"
+//                                     value={driverName}
+//                                     onChange={event => setDriverName(event.target.value)}
+//                                     />
+//                                     <div className='error'>{errors.name && <span>{errors.name}</span>}</div>
+//                             </div>
+
+//           <div>
+
+//             {/* Input del nombre */}
+//             <label>SUMMARY</label>
+//             <textarea
+//               name='summary'
+//               placeholder='Enter a recipe summary'
+//               value={driverSurname}
+//               onChange={event => setDriverSurname(event.target.value)}
+//             />
+//             <div className='error'>{errors.summary && <span>{errors.summary}</span>}</div>
+            
+//           </div>
+
+//           <div>
+
+//             {/* Input de la imagen */}
+//             <label>IMAGE</label>
+//             <input 
+//               type='text'
+//               name='image'
+//               placeholder='Enter the URL of your image'
+//               onChange={event => setDriverImage(event.target.value)}
+//             />
+//             <div className='error'>{errors.image && <span>{errors.image}</span>}</div>
+            
+//           </div>
+
+//           <div>
+
+            
+            
+//             <div>
+//               <textarea 
+//                 value={driverBirthDate}
+//                 placeholder='Enter a step'
+//                 onChange={event => {      //Cada vez que se introduce un caracter actualiza el estado del boton, es decir decide si se habilita o no
+//                   setDriverBirthDate(event.target.value);
+//                   isStepButtonDisabled();
+//                 }}
+//               />
+//               <div className='error'>{errors.steps && <span>{errors.steps}</span>}</div>
+//               <div className='error'>{errorStep && <span>{errorStep}</span>}</div>
+//             </div>
+//             <ul>
+//               {
+//                 driverNationality.map((step, index) => {
+//                   return (
+//                     <li key={index}>
+//                       {index + 1} - {step}
+//                       <button className='editButton' type='button' onClick={() => handleEditStep(index)}>
+//                       Edit</button>
+                      
+//                       <button className='deleteButton' type='button' onClick={() => handleDeleteStep(index)} >
+//                       Delete</button>
+//                     </li>
+//                   )
+//                 })
+//               }
+//             </ul>
+            
+//           </div>
+
+//           <div>
+
+//             {/* Input del HealthScore */}
+//             <label>HEALTH SCORE {driverDescription}</label>
+//             <div>
+//               <input 
+//                 type='range'
+//                 name='healthScore'
+//                 value={driverDescription}
+//                 onChange={event => setDriverDescription(event.target.value)}
+//               />
+//             </div>
+
+//           </div>
+
+//           <div className='teams-container'>
+//             {/* Input de las Dietas */}
+//             <label>DIETS</label>
+//             <div >
+//               {allTeams?.map(team => (
+//                 <label className='team-name' key={team.name}>
+//                   <input 
+//                     type='checkbox'
+//                     className='team-input'
+//                     name={team.name}
+//                     value={team.name}
+//                     onChange={event => handleTeams(event)}
+//                   />
+//                   {team.name.toUpperCase()}
+//                 </label>
+//               ))}
+//             </div>
+//             <div className='error'>{errors.team && <span>{errors.team}</span>}</div>
+
+
+//           </div>
+
+//           {/* Boton de submit */}
+//           <button className='boton' type='submit' disabled={!isSubmitButtonEnabled}>SUBMIT</button>
+//         </form>
+//       </div>
+//     </div>
+//   )
+
+
+// }

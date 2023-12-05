@@ -2,7 +2,6 @@ import { setFilterByTeam, setFilterByOrigin, resetFilters, getAllDrivers, getAll
 import { connect, useDispatch } from 'react-redux';
 import React, { useEffect, useState } from 'react';
 
-import style from "./CardsContainer.module.css";
 import "./Cards.css"
 import Pagination from '../Pagination/Pagination';
 

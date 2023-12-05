@@ -6,7 +6,7 @@
     width: 70%;
     min-height: 150px;
     margin-left: 15%;
-    background: rgba( 255, 255, 255, 0.12 );
+    background: rgb(154, 59, 59,0.5);
     box-shadow: 0 5px 15px 0 rgba(112, 112, 112, 0.37);
     backdrop-filter: blur( 18px );
     -webkit-backdrop-filter: blur( 18px );
@@ -44,14 +44,14 @@
 }
 
 .details article:hover {
-    background-color: hsl(252, 5%, 19%);
+    background-color: rgb(154, 59, 59,0.5);
     border-radius: 30px;
     color: hsl(220, 7%, 95%);
     transform: scale(1.01);
 }
 
 .birthDate:hover {
-    background-color: hsl(252, 5%, 19%);
+    background-color: rgb(154, 59, 59,0.5);
     border-radius: 30px;
     color: hsl(220, 7%, 95%);
     transform: scale(1.01);
@@ -81,6 +81,7 @@
 }
 
 .propiedad {
+    /* background-color: yellowgreen; */
     text-align: center;
     color: #576fd9;
 
@@ -118,6 +119,7 @@
 }
 
 .birthDate {
+    
 
     display: flex;
 
@@ -136,12 +138,21 @@
 }
 
 .number {
-    margin-left: auto;
+    margin-left: 10px;
     margin-right: 100px;
     padding-right: 20%;
     color: hsl(220, 7%, 95%);
 }
 
+
 #dob {
     padding-left: 20%;
+}
+#id {
+    padding-left: 20%;
+    padding-right: 20px;
+}
+#nationality {
+    padding-left: 20%;
+    padding-right: 20px;
 }

@@ -1,14 +1,14 @@
 .pagination {
-    
+    /* background-color: blue; */
     display: flex;
 
     flex-wrap: wrap;
 
-    /* justify-content: center; */
+    justify-content: center;
 
-    margin-left: 31%;
+    /* margin-left: 33%; */
     
-    margin-right: auto;
+    /* margin-right: 20em; */
 
 }
 
@@ -18,7 +18,7 @@
 
 .button-pagination {
     color: hsl(220, 7%, 91%);
-    background-color: hsl(218, 11%, 14%);
+    background-color: rgb(50, 78, 143);
     font-weight: 900;
     font-size: 20px;
     border: 0;
@@ -35,7 +35,7 @@
 
 .numeracion {
     color: hsl(220, 7%, 91%);
-    background-color: hsl(218, 11%, 14%);
+    background-color: rgb(50, 78, 143);
     font-weight: 600;
     font-size: 15px;
     margin: 2px;
@@ -46,6 +46,6 @@
 
 .numeracion.active {
     background-color: rgb(61, 85, 141);
-    color:#030701;
+    color:#ffffff;
     font-weight: 700;
 }

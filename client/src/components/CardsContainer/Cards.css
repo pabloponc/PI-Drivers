@@ -1,24 +1,34 @@
 .Cards {
+    /* background-color: brown; */
     display: flex;
 
     flex-direction: column;
 
     align-items: center;
+
+    min-height: 83vh;
+
     /* justify-content: center; */
 }
 
 .cards-organization {
+    /* background-color: red; */
+    justify-content: center;
     
     /* display: flex; */
 
     margin-left: 13.5%;
+    margin-right: 13.5%;
 
+}
+.selectContainer{
+    margin: 20px;
 }
 
 select {
     align-self: center;
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
     border-radius: 6px;
     height: 33px;
     border: 0;

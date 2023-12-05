@@ -54,11 +54,18 @@ const Detail = (props) => {
                     <div className={style.imageContainer} >
                         <img src={driverDetail.image} alt={driverDetail.name} />
                     </div>
-
-                    <div className={style.birthDate}>
-                        <h2 className={style.propiedad} id={style.dob} >Birth Date:</h2><h2 className={style.number}>{driverDetail.birthDate}</h2>
-                    </div>
-
+                    <article>
+                        <h2 className={style.propiedad}>ID</h2>
+                        <h2 className={style.propiedad2}>{driverDetail.id}</h2>
+                    </article>
+                    <article>
+                        <h2 className={style.propiedad}>Nationality</h2>
+                        <h2 className={style.propiedad2}>{driverDetail.nationality}</h2>
+                    </article>
+                    <article>
+                        <h2 className={style.propiedad}>BirthDate</h2>
+                        <h2 className={style.propiedad2}>{driverDetail.birthDate}</h2>
+                    </article>
                     <article>
                         <h2 className={style.propiedad}>Teams</h2>
                         <h2 className={style.propiedad2}>{driverDetail.teams}</h2>

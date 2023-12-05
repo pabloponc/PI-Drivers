@@ -8,16 +8,16 @@ const NavBar = ({onSearch}) => {
         <nav>
             <div className={style.mainContainer}>
 
+                <div className={style.sb}>
+                <SearchBar onSearch={onSearch}/>
+
+                </div>
                 <div className={style.logoContainer}>
                     <Link to="/home">
                         <img className={style.logo} src={logo} alt="logo"/>
                     </Link>
                 </div>
 
-                <div className={style.sb}>
-                <SearchBar onSearch={onSearch}/>
-
-                </div>
             </div>
         </nav>
     )
